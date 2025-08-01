@@ -32,8 +32,7 @@ This tool solves these with a unified AI-powered solution built for simplicity a
 ---
 
 ## 📬 Contact:
-📧 Email: reddykiran1190@gmail.com  
-📱 Phone: +91 8431188641  
+📧 Email: reddykiran1190@gmail.com   
 🔗 LinkedIn: [Kiran Reddy](https://www.linkedin.com/in/kiranreddy21)
 
 ---
