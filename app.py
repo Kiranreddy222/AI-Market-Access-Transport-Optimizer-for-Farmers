@@ -23,7 +23,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 # Load Data
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\DSIP\mandi_prices_karnataka_daily(1).csv")
+    df = pd.read_csv("mandi_prices_karnataka_daily(1).csv")
     df['date'] = pd.to_datetime(df['date'], format='%d-%m-%Y')
     return df
 
@@ -138,7 +138,7 @@ st.plotly_chart(fig, use_container_width=True)
 st.subheader("🚚 Suggested Transport Route")
 st.markdown("_(Using OpenRouteService)_")
 
-location_data = pd.read_csv(r"C:\DSIP\karnataka_district_mandis2.csv")
+location_data = pd.read_csv("karnataka_district_mandis2.csv")
 mandi_location = location_data[location_data['district'] == selected_district].iloc[0]
 lat, lon = mandi_location['latitude'], mandi_location['longitude']
 
@@ -148,10 +148,11 @@ folium_static(m)
 
 # Local Buyer Info
 st.subheader("🧑‍🌾 Local Buyers in Your District")
-buyers_df = pd.read_csv(r"C:\DSIP\karnataka_crop_buyers.csv")
+buyers_df = pd.read_csv("karnataka_crop_buyers.csv")
 district_buyers = buyers_df[(buyers_df['district'] == selected_district) & (buyers_df['Crop'].str.lower() == selected_crop.lower())]
 st.dataframe(district_buyers, use_container_width=True)
 
 # Footer
 st.markdown("---")
 st.markdown("Made with ❤️ for Farmers | Powered by Prophet & OpenRouteService")
+
